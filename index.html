@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博物館網站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#exhibitions">展覽介紹</a></li>
+                <li><a href="#tickets">購票資訊</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://file.moc.gov.tw/001/Upload/520/relpic/14313/149413/987f317c-9f7b-44cc-b4a1-b5c80ef0e649.jpg" style="width:100%" alt="a">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://file.moc.gov.tw/001/Upload/520/relpic/14313/149325/3a8377a1-0f24-42b7-b8a9-529b74ef7392.png" style="width:100%" alt="a">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://file.moc.gov.tw/001/Upload/520/relpic/14313/149405/8f51cb47-b3d2-4f2d-af7b-96d81ea3716a.jpg" style="width:100%" alt="a">
+        </div>
+    </div>
+    
+    <section id="home" class="intro-section">
+        <h1>歡迎來到博物館</h1>
+        <p>探索藝術與歷史的奧秘。</p>
+    </section>
+    <section id="exhibitions" class="cards">
+        <div class="card">
+            <img src="exhibition1.jpg" alt="展覽1">
+            <h3>古埃及展</h3>
+            <p>深入了解古埃及的文化與藝術。</p>
+            <button>了解更多</button>
+        </div>
+        <div class="card">
+            <img src="exhibition2.jpg" alt="展覽2">
+            <h3>中國古代瓷器</h3>
+            <p>欣賞精美的中國古代瓷器。</p>
+            <button>了解更多</button>
+        </div>
+    </section>
+    <section id="tickets" class="ticket-section">
+        <!-- <h2>購票資訊</h2> -->
+        <form id="ticket-form">
+            <label for="tickets">選擇票數:</label>
+            <select id="tickets" name="tickets">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <button type="submit">購買票券</button>
+        </form>
+        <div class="form-container">
+            <form id="contactForm" action="submit_form.php" method="POST">
+                <h2>聯絡我們</h2>
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="validation-icon"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">電子郵件</label>
+                    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <span class="validation-icon"></span>
+                </div>
+                <div class="form-group">
+                    <label for="inquiry-type">詢問類型</label>
+                    <select id="inquiry-type" name="inquiry_type">
+                        <option value="general">一般問題</option>
+                        <option value="support">客戶支援</option>
+                        <option value="feedback">意見反饋</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">訊息</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">提交</button>
+            </form>
+        </div>
+
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <h2 id="calendar-year"></h2>
+            </div>
+            <div class="calendar-content">
+                <div id="calendar"></div>
+                <div id="event-sidebar" class="sidebar">
+                    <div class="sidebar-content">
+                        <span class="close">&times;</span>
+                        <p id="event-details"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <div class="gallery">
+            <div class="card" onclick="location.href='exhibition-info1.html';">
+                <img src="https://file.moc.gov.tw/001/Upload/520/relpic/14696/165452/603a58e5-9f72-42dc-ab0d-05997a95521a.jpg" alt="Exhibition 1">
+                <div class="overlay">
+                    <div class="text">馬上查看</div>
+                </div>
+            </div>
+            <!-- 複製以下結構以添加更多卡片 -->
+            <div class="card" onclick="location.href='exhibition-info2.html';">
+                <img src="exhibition2.jpg" alt="Exhibition 2">
+                <div class="overlay">
+                    <div class="text">馬上查看</div>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='exhibition-info1.html';">
+                <img src="exhibition1.jpg" alt="Exhibition 1">
+                <div class="overlay">
+                    <div class="text">馬上查看</div>
+                </div>
+            </div>
+            <!-- 複製以下結構以添加更多卡片 -->
+            <div class="card" onclick="location.href='exhibition-info2.html';">
+                <img src="exhibition2.jpg" alt="Exhibition 2">
+                <div class="overlay">
+                    <div class="text">馬上查看</div>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='exhibition-info1.html';">
+                <img src="exhibition1.jpg" alt="Exhibition 1">
+                <div class="overlay">
+                    <div class="text">馬上查看</div>
+                </div>
+            </div>
+            <!-- 複製以下結構以添加更多卡片 -->
+            <div class="card" onclick="location.href='exhibition-info2.html';">
+                <img src="exhibition2.jpg" alt="Exhibition 2">
+                <div class="overlay">
+                    <div class="text">馬上查看</div>
+                </div>
+            </div>
+            <!-- More cards... -->
+        </div>
+        
+    </section>
+    <section id="contact" class="contact-section">
+        <h2>聯絡我們</h2>
+        <p>如有任何問題，請透過下方方式聯繫我們。</p>
+        <p>Email: info@museum.com</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 博物館. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
